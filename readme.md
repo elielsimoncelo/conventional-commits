@@ -113,28 +113,28 @@ Refs #133
 > É um pacote que facilita a criação de mensagens de commit seguindo a especificação **Conventional Commits**.
 
 ### Requisitos
+#### No Ubuntu
 ```sh
 sudo apt update -y
 sudo apt install git -y
 sudo apt install npm -y
 sudo apt install nodejs -y
 ```
+#### No Windows
+- https://nodejs.org/en/download/
 
 ### Instalação
 ```sh
 sudo npm install -g commitizen
 sudo npm install -g cz-conventional-changelog
-npm install -g @commitlint/cli @commitlint/config-conventional
 ```
 
 ### Configurando o repositório
 ```sh
-echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc # criar arquivo na pasta raiz do usuário
-echo "module.exports = {extends: ['@commitlint/config-conventional']}" > ~/commitlint.config.js
-
+git init # crie ou clone um novo repositorio
+echo '{ "path": "cz-conventional-changelog" }' > .czrc # criar arquivo na raiz do projeto
 mkdir sample-app
 cd sample-app
-git init # crie ou clone um novo repositorio
 ```
 
 ### Exemplo: Primeiro commit
