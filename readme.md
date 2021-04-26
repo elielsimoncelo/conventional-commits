@@ -131,10 +131,10 @@ sudo npm install -g cz-conventional-changelog
 
 ### Configurando o repositório
 ```sh
-git init # crie ou clone um novo repositorio
-echo '{ "path": "cz-conventional-changelog" }' > .czrc # criar arquivo na raiz do projeto
 mkdir sample-app
 cd sample-app
+git init # crie ou clone um novo repositorio
+echo '{ "path": "cz-conventional-changelog" }' > .czrc # criar arquivo na raiz do projeto
 ```
 
 ### Exemplo: Primeiro commit
