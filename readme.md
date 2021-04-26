@@ -124,11 +124,14 @@ sudo apt install nodejs -y
 ```sh
 sudo npm install -g commitizen
 sudo npm install -g cz-conventional-changelog
+npm install -g @commitlint/cli @commitlint/config-conventional
 ```
 
 ### Configurando o repositório
 ```sh
 echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc # criar arquivo na pasta raiz do usuário
+echo "module.exports = {extends: ['@commitlint/config-conventional']}" > ~/commitlint.config.js
+
 mkdir sample-app
 cd sample-app
 git init # crie ou clone um novo repositorio
